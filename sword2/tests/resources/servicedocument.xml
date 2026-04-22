@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<service xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:sword="http://purl.org/net/sword/terms/"
+    xmlns:atom="http://www.w3.org/2005/Atom"
+    xmlns="http://www.w3.org/2007/app">
+
+    <sword:version>2.0</sword:version>
+    <sword:maxUploadSize>16777216</sword:maxUploadSize>
+
+    <workspace>
+        <atom:title>Main Site</atom:title>
+
+        <collection href="http://swordapp.org/col-iri/43">
+            <atom:title>Collection 43</atom:title>
+            <accept>*/*</accept>
+            <accept alternate="multipart-related">*/*</accept>
+            <sword:collectionPolicy>Collection Policy</sword:collectionPolicy>
+            <dcterms:abstract>Collection Description</dcterms:abstract>
+            <sword:mediation>false</sword:mediation>
+            <sword:treatment>Treatment description</sword:treatment>
+            <sword:acceptPackaging>http://purl.org/net/sword/package/SimpleZip</sword:acceptPackaging>
+            <sword:acceptPackaging>http://purl.org/net/sword/package/METSDSpaceSIP</sword:acceptPackaging>
+            <sword:service>http://swordapp.org/sd-iri/e4</sword:service>
+        </collection>
+    </workspace>
+</service>

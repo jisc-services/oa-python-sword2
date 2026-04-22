@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "python-sword2"
+# Version is supplied dymamically - see [tool.setuptools.dynamic] section below
+dynamic = ["version"]
+authors = [{name = "JISC", email = "XXXX.YYYY@YYYY.ac.uk"}]
+description = "PubRouter Octopus - Flask Library for PubRouter code"
+requires-python = ">=3.11"
+dependencies = [
+        "Flask>=3.1.3,<4.0.0",
+        "Flask-Login~=0.6.3",
+        "lxml~=6.0",
+        "requests~=2.32.5",
+        "requests-toolbelt~=1.0.0",
+        "Werkzeug>=3.1.6,<4.0.0"
+]
+
+[tool.setuptools.dynamic]
+version = {file = "VERSION"}  # obtained from VERSION FILE
+
+[tool.setuptools]
+include-package-data = false     # No non-python files to include (from MANIFEST.in)
+
+[tool.setuptools.packages.find]
+where = ["."]  # list of folders that contain the packages (["."] by default)
+include = ["*"]  # package names should match these glob patterns (["*"] by default)
+exclude = ["sword2.tests.*"]  # exclude TESTS packages
+namespaces = false  # to disable scanning PEP 420 namespaces (true by default)
