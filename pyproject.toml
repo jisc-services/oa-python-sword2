@@ -7,14 +7,14 @@ build-backend = "setuptools.build_meta"
 name = "python-sword2"
 # Version is supplied dymamically - see [tool.setuptools.dynamic] section below
 dynamic = ["version"]
-authors = [{name = "JISC", email = "XXXX.YYYY@YYYY.ac.uk"}]
-description = "PubRouter Octopus - Flask Library for PubRouter code"
+authors = [{name = "JISC", email = "XXXX@YYYY.ZZZ"}]
+description = "PubRouter SWORD2 - SWORD2 client & server implementation"
 requires-python = ">=3.11"
 dependencies = [
         "Flask>=3.1.3,<4.0.0",
         "Flask-Login~=0.6.3",
         "lxml~=6.1",
-        "requests~=2.33.1",
+        "requests~=2.34.0",
         "requests-toolbelt~=1.0.0",
         "Werkzeug>=3.1.8,<4.0.0"
 ]
